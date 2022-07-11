@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.BoxBlur?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="587.0" prefWidth="786.0" styleClass="bg" stylesheets="@../../Css/style.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Client.controllers.Controller">
+   <children>
+      <Pane fx:id="pnSignUp" layoutX="158.0" layoutY="88.0" prefHeight="420.0" prefWidth="470.0" styleClass="transparent-f" stylesheets="@../Css/style.css">
+         <children>
+            <ImageView fx:id="btnBack" fitHeight="38.0" fitWidth="44.0" layoutX="26.0" layoutY="27.0" onMousePressed="#handleMouseEvent" opacity="0.48" pickOnBounds="true" preserveRatio="true" style="-fx-blend-mode: white;" styleClass="btnBack">
+               <image>
+                  <Image url="@../../icons/back.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="92.0" layoutY="24.0" prefHeight="40.0" prefWidth="247.0" text="Creat new account" textFill="WHITE">
+               <font>
+                  <Font name="Calibri" size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="88.0" layoutY="373.0" text="Already Have an Account?" textFill="WHITE">
+               <font>
+                  <Font name="Cambria" size="17.0" />
+               </font>
+            </Label>
+            <Button fx:id="getStarted" layoutX="290.0" layoutY="370.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="28.0" prefWidth="99.0" style="-fx-background-color: transparent; -fx-background-radius: 90;" styleClass="btnLogin" stylesheets="@../Css/style.css" text="Log In Here" textFill="WHITE">
+               <font>
+                  <Font name="Cambria Bold" size="14.0" />
+               </font>
+            </Button>
+            <Label fx:id="controlRegLabel" layoutX="82.0" layoutY="435.0" opacity="0.0" prefHeight="27.0" prefWidth="314.0" text="Please, Enter all the necessary Info" textFill="#f44336">
+               <font>
+                  <Font name="Arial" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="goBack" layoutX="77.0" layoutY="452.0" opacity="0.0" prefHeight="25.0" prefWidth="314.0" text="Please, go back and login!" textFill="#6abf69">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="nameExists" layoutX="65.0" layoutY="435.0" opacity="0.0" prefHeight="34.0" prefWidth="287.0" text="Username already exists!" textFill="#f44336">
+               <font>
+                  <Font name="Arial" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="checkEmail" layoutX="87.0" layoutY="447.0" opacity="0.0" prefHeight="33.0" prefWidth="272.0" text="E-mail is already registered!" textFill="#f44336">
+               <font>
+                  <Font name="Arial" size="16.0" />
+               </font>
+            </Label>
+            <VBox alignment="CENTER" layoutX="84.0" layoutY="72.0" prefHeight="285.0" prefWidth="323.0" spacing="10.0">
+               <children>
+                  <TextField fx:id="regFirstName" prefHeight="35.0" prefWidth="233.0" promptText="Full Name" style="-fx-background-color: transparent;" styleClass="textField" stylesheets="@../Css/style.css">
+                     <font>
+                        <Font name="Arial" size="17.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="regName" prefHeight="35.0" prefWidth="233.0" promptText="Username" style="-fx-background-color: transparent;" styleClass="textField" stylesheets="@../Css/style.css">
+                     <font>
+                        <Font name="Arial" size="17.0" />
+                     </font>
+                  </TextField>
+                  <PasswordField fx:id="regPass" prefHeight="35.0" prefWidth="233.0" promptText="Password" style="-fx-background-color: transparent;" styleClass="textField" stylesheets="@../Css/style.css">
+                     <font>
+                        <Font name="Arial" size="17.0" />
+                     </font>
+                  </PasswordField>
+                  <TextField fx:id="regEmail" prefHeight="34.0" prefWidth="233.0" promptText="Email" style="-fx-background-color: transparent;" styleClass="textField" stylesheets="@../Css/style.css">
+                     <font>
+                        <Font name="Arial" size="17.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="regPhoneNo" prefHeight="35.0" prefWidth="233.0" promptText="Phone Number" style="-fx-background-color: transparent;" styleClass="textField" stylesheets="@../Css/style.css">
+                     <font>
+                        <Font name="Arial" size="17.0" />
+                     </font>
+                  </TextField>
+                  <HBox prefHeight="43.0" prefWidth="220.0" spacing="20.0">
+                     <children>
+                        <Label text="Gender:" textFill="WHITE">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <RadioButton fx:id="male" mnemonicParsing="false" selected="true" text="Male" textFill="WHITE">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="Gender" />
+                           </toggleGroup>
+                           <font>
+                              <Font name="Arial" size="15.0" />
+                           </font>
+                        </RadioButton>
+                        <RadioButton fx:id="female" mnemonicParsing="false" text="Female" textFill="WHITE" toggleGroup="$Gender">
+                           <font>
+                              <Font name="Arial" size="15.0" />
+                           </font>
+                        </RadioButton>
+                     </children>
+                  </HBox>
+                  <Button mnemonicParsing="false" onAction="#registration" prefHeight="39.0" prefWidth="232.0" style="-fx-background-radius: 5; -fx-background-color: #1dacd5;" stylesheets="@../Css/style.css" text="Create Account" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Beirut Regular" size="18.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="hollow" />
+                        <String fx:value="btnLogin" />
+                     </styleClass>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+      <Pane fx:id="pnSignIn" layoutX="179.0" layoutY="138.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="339.0" prefWidth="430.0" styleClass="transparent-f" stylesheets="@../../Css/style.css">
+         <children>
+            <VBox alignment="CENTER" layoutX="84.0" layoutY="33.0" prefHeight="242.0" prefWidth="248.0" spacing="20.0">
+               <children>
+                  <Label prefHeight="40.0" prefWidth="272.0" text="Log in to your account " textFill="WHITE">
+                     <font>
+                        <Font name="Calibri" size="22.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="userName" prefHeight="34.0" prefWidth="208.0" promptText="Username" style="-fx-background-color: transparent; -fx-focus-traversable: green;" styleClass="textField" stylesheets="@../Css/style.css">
+                     <font>
+                        <Font name="Arial" size="17.0" />
+                     </font>
+                  </TextField>
+                  <PasswordField fx:id="passWord" prefHeight="35.0" prefWidth="208.0" promptText="Password" style="-fx-background-color: transparent;" styleClass="textField" stylesheets="@../Css/style.css">
+                     <font>
+                        <Font name="Arial" size="17.0" />
+                     </font>
+                  </PasswordField>
+                  <Button mnemonicParsing="false" onAction="#login" prefHeight="38.0" prefWidth="208.0" style="-fx-background-radius: 5; -fx-background-color: #1dacd5;" stylesheets="@../Css/style.css" text="Log In" textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="btnLogin" />
+                        <String fx:value="hollow" />
+                     </styleClass>
+                  </Button>
+               </children>
+            </VBox>
+            <HBox layoutX="99.0" layoutY="287.0" prefHeight="27.0" prefWidth="261.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="28.0" prefWidth="132.0" text="Don't Have an Account?" textFill="WHITE">
+                     <font>
+                        <Font name="Cambria" size="13.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="btnSignUp" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="10.0" prefWidth="112.0" style="-fx-background-color: transparent;" stylesheets="@../Css/style.css" text="Sign Up Here" textFill="WHITE">
+                     <font>
+                        <Font name="Candara Bold" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+         <effect>
+            <BoxBlur iterations="2" />
+         </effect>
+      </Pane>
+      <Label fx:id="loginNotifier" layoutX="261.0" layoutY="517.0" opacity="0.0" prefHeight="25.0" prefWidth="247.0" text="Username or password is incorrect" textFill="#ff5353">
+         <font>
+            <Font name="Arial" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="success" layoutX="273.0" layoutY="521.0" opacity="0.0" prefHeight="27.0" prefWidth="248.0" text="Registration Successful" textFill="#6abf69">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

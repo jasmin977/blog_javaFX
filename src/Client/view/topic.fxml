@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="topic" prefHeight="85.0" prefWidth="325.0" style="-fx-background-color: #1ecbfe; -fx-border-color: derive(black, 100%);" styleClass="hollow" stylesheets="@../../Css/style.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Client.PostController">
+   <children>
+      <VBox layoutX="114.0" layoutY="19.0" prefHeight="55.0" prefWidth="175.0">
+         <children>
+            <Label fx:id="topic" prefHeight="27.0" prefWidth="100.0" text="Bilogy" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="21.0" />
+               </font>
+            </Label>
+            <Label fx:id="articleCount" prefHeight="24.0" prefWidth="143.0" text="10 Articles" textFill="#686868">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <HBox alignment="CENTER" layoutY="1.0" prefHeight="90.0" prefWidth="90.0" style="-fx-background-color: #1dacd5;" styleClass="hollow" stylesheets="@../../Css/style.css">
+         <children>
+            <Circle fx:id="topicImg" fill="DODGERBLUE" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

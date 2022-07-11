@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="bubble" prefHeight="89.0" prefWidth="322.0" style="-fx-background-color: transparent; -fx-background-radius: 10;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Client.controllers.Bubble">
+   <children>
+      <HBox alignment="CENTER" prefHeight="90.0" prefWidth="325.0" style="-fx-background-color: #1dacd5; -fx-background-radius: 10;" styleClass="hollow" stylesheets="@../../Css/style.css">
+         <children>
+            <Label fx:id="chatText" prefHeight="55.0" prefWidth="277.0" text="text" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="21.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+   </children>
+</Pane>
